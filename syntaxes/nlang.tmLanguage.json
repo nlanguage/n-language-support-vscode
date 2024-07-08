@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "N",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#identifiers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.nlang",
+					"match": "\\b(when|loop|return|import)\\b"
+				},
+				{
+					"name": "storage.type",
+					"match": "\\b(class|fun|val|var)\\b"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "\\+|\\-|\\*|\\/|=|\\+=|\\-=|\\*=|\\/=|<|>|<=|>=|!=|->"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.nlang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nlang",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.double-slash",
+			"match": "//.*$"
+		},
+		"identifiers": {
+			"patterns": [
+				{
+					"name": "variable.name",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.nlang"
+}

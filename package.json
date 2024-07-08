@@ -1,0 +1,26 @@
+{
+  "name": "n-language-support",
+  "displayName": "N Language Support",
+  "repository": "https://github.com/nlanguage/n-language-support-vscode",
+  "description": "Basic syntax highlighting and support for the N programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nlang",
+      "aliases": ["N", "nlang"],
+      "extensions": [".n"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nlang",
+      "scopeName": "source.nlang",
+      "path": "./syntaxes/nlang.tmLanguage.json"
+    }]
+  }
+}
